@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lin09/digi-refs.git"
+    "url": "git+https://github.com/digi1874/digi-refs.git"
   },
   "keywords": [
     "js",
@@ -21,9 +21,9 @@
   "author": "lin09",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lin09/digi-refs/issues"
+    "url": "https://github.com/digi1874/digi-refs/issues"
   },
-  "homepage": "https://github.com/lin09/digi-refs#readme",
+  "homepage": "https://github.com/digi1874/digi-refs#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
