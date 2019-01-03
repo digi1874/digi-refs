@@ -7,7 +7,7 @@ let id = 0
 let arrayTag = toString.call([])
 Object.defineProperties(refs, {
   propertiy: { value: 'ref' },
-  fun: { value: (element, id) => {
+  handler: { value: (element, id) => {
     // 设置指向
     if (refs[id]) {
       // 指向多个
