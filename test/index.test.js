@@ -13,7 +13,7 @@ test('测试分配id', () => {
 test('测试指向', () => {
   const id = allotId()
   const element = document.createElement('div')
-  refs.fun(element, id)
+  refs.handler(element, id)
 
   expect(refs[id].outerHTML).toBe(element.outerHTML)
 })
@@ -23,9 +23,9 @@ test('测试指向多个', () => {
   const element1 = document.createElement('div')
   const element2 = document.createElement('p')
   const element3 = document.createElement('a')
-  refs.fun(element1, id)
-  refs.fun(element2, id)
-  refs.fun(element3, id)
+  refs.handler(element1, id)
+  refs.handler(element2, id)
+  refs.handler(element3, id)
 
   expect(refs[id][0].outerHTML).toBe(element1.outerHTML)
   expect(refs[id][1].outerHTML).toBe(element2.outerHTML)
@@ -35,7 +35,7 @@ test('测试指向多个', () => {
 test('测试元素移除时也删除指向（单个）', () => {
   const id = allotId()
   const element = document.createElement('div')
-  refs.fun(element, id)
+  refs.handler(element, id)
   element.remove()
 
   expect(refs[id]).toBe(undefined)
@@ -45,8 +45,8 @@ test('测试元素移除时也删除指向（多个）', () => {
   const id = allotId()
   const element1 = document.createElement('div')
   const element2 = document.createElement('p')
-  refs.fun(element1, id)
-  refs.fun(element2, id)
+  refs.handler(element1, id)
+  refs.handler(element2, id)
 
   element1.remove()
   expect(refs[id][0].outerHTML).toBe(element2.outerHTML)
