@@ -1,7 +1,7 @@
 import refs, { allotId } from '../src/main'
 
-test('测试 propertiy 值为 ref', () => {
-  expect(refs.propertiy).toBe('ref')
+test('测试 property 值为 ref', () => {
+  expect(refs.property).toBe('ref')
 })
 
 test('测试分配id', () => {

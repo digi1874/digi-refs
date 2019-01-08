@@ -6,7 +6,7 @@ const refs = {}
 let id = 0
 let arrayTag = toString.call([])
 Object.defineProperties(refs, {
-  propertiy: { value: 'ref' },
+  property: { value: 'ref' },
   handler: { value: (element, id) => {
     // 设置指向
     if (refs[id]) {
