@@ -49,6 +49,8 @@ test('测试元素移除时也删除指向（多个）', () => {
   refs.handler(element2, id)
 
   element1.remove()
+  // 测试多次移除
+  element1.remove()
   expect(refs[id][0].outerHTML).toBe(element2.outerHTML)
 
   element2.remove()

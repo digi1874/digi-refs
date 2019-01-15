@@ -24,9 +24,12 @@ Object.defineProperties(refs, {
       if (toString.call(refs[id]) !== arrayTag) {
         delete refs[id]
       } else {
-        refs[id].splice(refs[id].indexOf(element), 1)
-        if (refs[id].length === 0) {
-          delete refs[id]
+        const index = refs[id].indexOf(element)
+        if (index !== -1) {
+          refs[id].splice(index, 1)
+         if (refs[id].length === 0) {
+           delete refs[id]
+         }
         }
       }
       element.oldRemove()
